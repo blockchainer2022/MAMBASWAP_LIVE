@@ -99,7 +99,7 @@ export const contractAbi = [
   },
   {
     inputs: [],
-    name: "getLPTokensBalance",
+    name: "getLPLockedTokensBalance",
     outputs: [{ internalType: "uint256", name: "liquidity", type: "uint256" }],
     stateMutability: "view",
     type: "function",
@@ -285,6 +285,5 @@ export const contractAbi = [
     type: "function",
   },
 ];
-
 // export const contractAddress = "0x7026e274099f75aBf6670eaE5e43AFD78027db68";
-export const contractAddress = "0x727154D02239A687C57FAC003ca50D95EcDAEc9a";
+export const contractAddress = "0x1dFBf3cD87b716d32Ab8f8dD5538cB4DfB756A59";
