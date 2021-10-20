@@ -69,7 +69,12 @@ const Index = ({
           onSubmit={submitHandler}
         >
           <div className="mt-4">
-            <Field value={bnb} handler={bnbHandler} balance={bnbBalance} />
+            <Field
+              value={bnb}
+              handler={bnbHandler}
+              balance={bnbBalance}
+              decimal={18}
+            />
             <span className="block text-center text-base my-1">
               <i className="fas fa-arrow-down"></i>
             </span>
@@ -80,6 +85,7 @@ const Index = ({
               value={mamba}
               handler={mambaHandler}
               balance={userTokenBalance}
+              decimal={9}
             />
             <span className="block text-xs mt-2 text-gray-500 text-center">
               1 BNB = {total2} MAMBA
@@ -118,13 +124,14 @@ const Field = ({
   balance,
   value,
   handler,
+  decimal,
 }) => {
   return (
     <div className="">
       <div className="text-sm flex justify-between items-center mb-1">
         <span className="font-medium">{label1}</span>
         <span className=" text-xs dark:text-gray-400">
-          Available balance : {Number(balance).toFixed(2)}
+          Available balance : {Number(balance).toFixed(balance ? decimal : 2)}
         </span>
       </div>
       <div className="h-14 w-full rounded-xl field">
