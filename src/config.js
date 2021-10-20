@@ -119,16 +119,16 @@ export const contractAbi = [
     type: "function",
   },
   {
-    inputs: [{ internalType: "address", name: "", type: "address" }],
-    name: "icoBuyers",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    inputs: [],
+    name: "icoState",
+    outputs: [{ internalType: "bool", name: "", type: "bool" }],
     stateMutability: "view",
     type: "function",
   },
   {
     inputs: [],
-    name: "icoState",
-    outputs: [{ internalType: "bool", name: "", type: "bool" }],
+    name: "lockedBNBbalance",
+    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
     stateMutability: "view",
     type: "function",
   },
@@ -140,19 +140,15 @@ export const contractAbi = [
     type: "function",
   },
   {
-    inputs: [
-      { internalType: "uint256", name: "_lpTokens", type: "uint256" },
-      { internalType: "uint256", name: "_amountTokenMin", type: "uint256" },
-      { internalType: "uint256", name: "_amountETHMin", type: "uint256" },
-    ],
-    name: "removeLiquidityETH",
+    inputs: [],
+    name: "renounceOwnership",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",
   },
   {
     inputs: [],
-    name: "renounceOwnership",
+    name: "resetTokenSold",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",
@@ -286,4 +282,4 @@ export const contractAbi = [
   },
 ];
 // export const contractAddress = "0x7026e274099f75aBf6670eaE5e43AFD78027db68";
-export const contractAddress = "0x1dFBf3cD87b716d32Ab8f8dD5538cB4DfB756A59";
+export const contractAddress = "0x0713B25aE4D16e6218977392D99d102B1d00c73d";
